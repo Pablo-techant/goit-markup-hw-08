@@ -1,0 +1,214 @@
+//modal-window-with-backdrop
+.modal__backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background-overlay-color-c;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //animation
+    @extend %animation_four-backdrop;
+}
+    .is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    //animation
+    @extend %animation_four-backdrop;
+    pointer-events: none;
+    }
+        .modal__window{
+            position: relative;
+            padding: 40px;
+            width: 528px;
+            min-height: 581px;
+            background: $background-overlay-color-b;
+            overflow: auto;
+            border-radius: $border-radius;
+            z-index: 1;
+            //animation
+            @extend %animation_four-backdrop;   
+        }
+            .modal__buttonclose{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 46px;
+                height: 46px;
+                padding: 0;
+                background: $nav-color-b;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:hover .close__vectorsvg,
+                &:focus .close__vectorsvg,
+                &:active .close__vectorsvg{
+                    fill: $nav-color;
+                    stroke: $nav-color;
+                }
+            }
+                .close__vectorsvg{
+                    @extend %position_absolute-center;
+                    //animation
+                    @extend %animation_fill;
+                    @extend %animation_stroke;
+                }    
+            .form__group{
+                width: 448px;
+            }
+                .form__title{
+                    width: 100%;
+                    font-weight: 700;
+                    font-size: $font-size-d;
+                    line-height: $line-height-r;
+                    text-align: center;
+                    margin: 0 0 2px 0;
+                }
+                    .form__name{
+                        display: block;
+                        font-weight: 400;
+                        font-size: $font-size-e;
+                        line-height: $line-height-g;
+                        letter-spacing: $letter-spacing-d;
+                        color: $primary-text-color;
+                        margin: 10px 0 4px 0;
+                    }
+                        .form__box{
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                            border: 1px solid $border-color; 
+                            border-radius: $border-radius;
+                            //animation
+                            @extend %animation_border-color;
+                        }
+                            .form__svg{
+                                position: absolute;
+                                z-index: 2;
+                                top: 11px;
+                                left: 12px;
+                            }
+                                .form-icon{
+                                //animation
+                                @extend %animation_fill;
+                                }
+                                .form__input{
+                                    position: absolute;
+                                    z-index: 1;
+                                    top: 11px;
+                                    left: 38px;
+                                    width: 406px;
+                                    font-size: $font-size-e;
+                                    line-height: $line-height-g;
+                                    letter-spacing: $letter-spacing-d;
+                                    color: $title-text-color;
+                                    background-color: $nav-color-b;
+                                }
+                        .form__coment{
+                            width: 100%;
+                            min-height: 120px;
+                            overflow: auto;
+                            padding: 12px 16px;
+                            border: 1px solid $border-color; 
+                            border-radius: $border-radius;
+                            //animation
+                            @extend %animation_border-color;
+                        }
+                            .form__text{
+                                width: 100%;
+                                height: 100%;
+                                font-size: $font-size-e;
+                                line-height: $line-height-g;
+                                letter-spacing: $letter-spacing-d;
+                                color: $title-text-color;
+                                outline: none;
+                            }   
+                    .form__checked{
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        margin: 20px 0 30px 0; 
+                    }
+                    .form__paragraf{
+                        line-height: $line-height-c;
+                        color: $primary-text-color;
+                        display: contents;
+                        //animation
+                        @extend %animation_border-color;
+                    } 
+                        .form__chec{
+                           -moz-appearance: none;
+                           -webkit-appearance: none;
+                           -appearance: none;
+                           &:checked + .form__icon{
+                                background-color: $nav-color;
+                                border-color: $nav-color;
+                            }
+                        }
+                        .form__checsvg{
+                            position: absolute;
+                            top: 4px;
+                            left: 13.5px;
+                            fill: $nav-color-b;
+                            background-origin: content-box;
+                        }
+                        .form__icon{
+                            width: 16px; 
+                            height: 15px;
+                            border: 2px solid $nav-color-one;
+                            border-radius: $border-radius;
+                            display: inline-block;
+                            margin: 0 7px 0 14px;
+                            //animation
+                            @extend %animation_border-color;
+                            @extend %animation_background-color;
+                        }
+                        .form__contract{
+                            color: $nav-color;
+                            margin-left: 7px;
+                            text-decoration: underline;
+                        }
+                    .form__buttonsend{
+                        font-weight: 700;
+                        font-size: $accent-font-size;
+                        line-height: $line-height-p;
+                        color: $nav-color-b;
+                        display: block;
+                        align-items: center;
+                        text-align: center;
+                        letter-spacing: $letter-spacing-c;
+                        background-color: $nav-color;
+                        width: 200px;
+                        height: 50px;
+                        margin: 0 auto;
+                        //animation
+                        @extend %animation_box-shadow;
+                        //navigation-effects
+                        &:hover,
+                        &:focus,
+                        &:active{
+                            @extend %box-shadow-standard;
+                        } 
+                    }                  
+//form-navigation-effects 
+.form__box:focus-within{
+    border-color: $nav-color; 
+    fill: $nav-color;
+} 
+.form__coment:focus-within{
+    border-color: $nav-color; 
+}        
+    .form__box:hover, .form__coment:hover{
+        border-color: $nav-color;
+        cursor: pointer;
+    }
+    .form__box:hover .form-icon, .form__box:focus .form-icon, 
+    .form__box:active .form-icon{
+        fill: $nav-color;
+    }

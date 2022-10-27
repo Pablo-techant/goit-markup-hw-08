@@ -1,0 +1,37 @@
+//potfolio
+//launnch
+.launnch{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    gap: 8px; 
+ }
+ /*---button parameters---*/
+ 
+ .but-laun{
+     font-weight: 500;
+     font-size: $accent-font-size;
+     line-height: $line-height-d;
+     padding: 6px 20px;
+     border: none;
+     border-radius: $border-radius;
+     cursor: pointer;
+     //animation
+     @extend %animation_color;
+     @extend %animation_background-color;
+     @extend %animation_box-shadow;
+     //navigation-effects
+     &:hover, 
+     &:focus, 
+     &:active{
+        background-color: $nav-color;
+        color: $standart-background-color;
+        border-color: $nav-color-two;
+        border-radius: $border-radius;
+        @extend %box-shadow-four-width;
+    }
+     
+}
+         
+ 
+

@@ -1,0 +1,169 @@
+/*---footer---*/
+
+.page-footer{
+    background-color: $primary-background-color;
+    padding: 60px 0 60px 0;
+ }
+ .footer-in{
+     display: flex;
+     align-items: baseline;
+ }
+ .footer-contak{
+    display: flex;
+    align-items: baseline;
+ }
+    .footer-web, .footer-adres{
+     display: flex;
+     justify-content: left;
+    }
+         .footer-web{
+             font-family: 'Raleway';
+             font-style: $main-font-style;
+             font-weight: 700;
+             font-size: $font-size-a;
+             line-height: $line-height-e;
+             color: $nav-color;
+             text-decoration: none;
+             margin-bottom: 20px;
+             //animation
+             @extend %animation_color;
+             &:hover, 
+             &:focus, 
+             &:active{
+                 color: $accent-text-color;
+             }
+            }
+             .footer-adres:not(:last-child){
+                 margin: 0 0 8px 0;
+             }
+                 .footer-stud, .address-location{
+                     color: $accent-text-color;
+                    //animation
+                     @extend %animation_color;
+                 } 
+ 
+                .address-location, .address-mail, .address-phone{
+                    font-weight: 400;
+                    line-height: $line-height-c;
+                    text-decoration: none;
+                    display: block;
+                 }
+                .address-mail, .address-phone{
+                    color: $text-color-a;
+                 }
+ 
+ //footer-navigation-effects
+     .footer-stud:hover, .footer-stud:focus, 
+     .footer-stud:active, .address-location:hover, 
+     .address-location:focus, .address-location:active{
+         color: $nav-color;
+     }
+             
+ //footer-link-svg
+ .join{
+     margin-left: 70px;
+ }
+ .join-title{
+     margin: 0 0 20px 0;
+     font-weight: 700;
+     text-transform: uppercase;
+     line-height: $line-height-a;
+     color: $accent-text-color;
+ }
+    .join-list{
+        @extend %disply_flex-center;
+         gap: 10px;
+         margin: 0 0 30px 0;
+        &__item{
+            display: table;
+            width: 44px;
+            height: 44px;
+        }
+            &__link{
+                display: table-cell;
+                width: 44px;
+                height: 44px;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.1);
+               //animation
+               @extend %animation_background-color;
+               @extend %animation_box-shadow;  
+               &:hover, 
+               &:focus,
+               &:active{
+                   background-color: $nav-color;
+                   @extend %box-shadow-four-black;
+                }
+            }
+                &__icon{
+                    fill: $nav-color-b;
+                }
+                    &__svg{
+                       //animation
+                       @extend %animation_fill; 
+                    }  
+     }
+         
+ //footer-send-form
+ .send{
+     margin-left: auto;
+     gap: 12px;
+     display: flex;
+     align-items: flex-end;
+     &__title{
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: $line-height-a;
+        color: $accent-text-color;
+        display: block;
+        margin: 0 0 20px 0; 
+    }
+                &__input{
+                    width: 358px;
+                    height: 50px;
+                    padding-left: 16px;
+                    font-size: $accent-font-size;
+                    line-height: $line-height-s;
+                    color: $text-color-a;
+                    background-color: $primary-background-color;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: $border-radius;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+                   //animation
+                   @extend %animation_box-shadow;
+                    //navigation-effects
+                   &:hover, 
+                   &:focus, 
+                   &:active{
+                       @extend %box-shadow-four-black;
+                   }
+                   }
+
+                &__button{
+                   @extend %disply_flex-center;
+                    gap: 10px;
+                    width: 200px;
+                    height: 50px;
+                    background-color: $nav-color;
+                    font-weight: 700;
+                    font-size: $accent-font-size;
+                    line-height: $line-height-p;
+                    color: $nav-color-b;
+                    letter-spacing: $letter-spacing-c;
+                    //animation
+                   @extend %animation_box-shadow;
+                     //navigation-effects
+                   &:hover, 
+                   &:focus, 
+                   &:active{
+                       @extend %box-shadow-four-black;
+                  }
+                }
+                &__svg{
+                    fill: $nav-color-b;
+                }
+ }
+     
+

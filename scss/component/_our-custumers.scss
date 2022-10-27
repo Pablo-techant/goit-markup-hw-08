@@ -1,0 +1,91 @@
+//customers-section
+.customers-title{
+    font-weight: 700;
+    font-size: $title-font-size;
+    line-height: $line-height-g;
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+//customers-link-svg
+.list-item{
+    @extend %disply_flex-center;
+    gap: 30px;
+    &__cust{
+        display: table;
+        width: 170px;
+        height: 92px;
+    }
+        &__link{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid $border-color; 
+            border-radius: $border-radius;
+            //animation
+            @extend %animation_background-color;
+            @extend %animation_box-shadow;
+        }
+            &__icon{
+                fill: $nav-color-c;
+            }
+                &__svg{
+                    position: absolute;
+                    //animation
+                    @extend %animation_fill;
+                }   
+}            
+//customers-link-svg-effects
+.list-item__link:hover, .list-item__link:focus,
+.list-item__link:active{
+    border: 1px solid $nav-color; 
+    border-radius: $border-radius;
+    @extend %box-shadow-standard;
+}
+    .list-item__link:hover .list-item__svg, 
+    .list-item__link:focus .list-item__svg,
+    .list-item__link:active .list-item__svg{
+        fill: $nav-color;
+    }
+//tablet-wercion
+@media(max-width: 768px){
+    .customers-title{
+        font-weight: 700;
+        font-size: $font-size-p;
+        line-height: $line-height-x;
+        margin-bottom: 30px;
+    }
+    .list-item{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        gap: 30px;
+    }
+    .list-item__cust{
+        width: 224px;
+    }
+
+}
+    //mobail__phon-wercion
+@media(max-width: 480px){
+    .customers-section{
+        margin: 60px 0 60px 0;
+    }
+    .customers-title{
+        font-weight: 700;
+        font-size: $font-size-p;
+        line-height: $line-height-x;
+        margin-bottom: 30px;
+    }
+    .list-item{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        gap: 30px;
+    }
+    .list-item__cust{
+        width: 208px;
+    }
+    list-item__cust:last-child{
+        padding-bottom: 60px;
+    }
+}

@@ -1,0 +1,59 @@
+//web-studio
+//launnch-background
+.main-launnch, .background{
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: 
+    linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+        rgba(47, 48, 58, 0.5)), url("../img/background/backgroudportfolio3.jpg");   
+}
+.main-launnch{
+    padding: 200px 0;
+    text-align: center;
+    display: block;
+    text-align: center;
+    align-items: center;
+    background-color: $primary-background-color;
+    }
+
+//launnch-options
+
+.slogan-launnch{
+    width: 696px;
+    margin: 0 auto 30px auto ;
+    font-weight: 900;
+    font-size: $font-size-b;
+    line-height: $line-height-o;
+    letter-spacing: $letter-spacing-c;
+    text-transform: uppercase;
+    color: $accent-text-color;
+  }
+    .launnch-button{
+        background-color: $nav-color;
+        padding: 10px 24px;
+        cursor: pointer;
+        border: none;
+        border-radius: $border-radius;
+        font-weight: 700;
+        font-size: $accent-font-size;
+        letter-spacing: $letter-spacing-c; 
+        line-height: $line-height-p;
+        color: $accent-text-color;
+        //animation
+        @extend %animation_color;
+        @extend %animation_background-color;
+        @extend %animation_box-shadow;
+        &:hover, 
+        &:focus,
+        &:active{
+            color: currentColor;
+            background-color: $nav-color-b;
+            @extend %box-shadow-four-black;
+ }
+    }
+        

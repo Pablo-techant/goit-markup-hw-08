@@ -1,0 +1,64 @@
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+ }
+ svg{
+     max-width: 100%;
+     height: auto;
+ }
+ input {
+  border: none;
+  outline: none;
+ }
+ button{
+     cursor: pointer;
+     border: none;
+     border-radius: $border-radius;
+ }
+ textarea, input{
+     outline: none;
+     border: none;
+     resize: none;
+ }
+ a {
+     text-decoration: none;
+ }
+ //body
+ body{
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    color: $title-text-color;
+    font-size: $primary-font-size;
+    letter-spacing: $letter-spacing-b;
+ }
+ //header
+ .section{
+    padding: 94px 0 94px 0;
+ }
+    @media(max-width: 768px){
+        .section{
+            padding: 60px 0 60px 0;
+            
+        }
+    }
+    @media(max-width: 480px){
+        .section{
+            padding: 0; 
+        }
+    }
+        .container{
+            margin: 0 auto;
+            width: 1200px;
+            padding: 0 15px 0 15px;
+        }
+        @media(max-width: 480px){
+            .container{
+                width: 480px;
+            }
+        }
+        @media(max-width: 768px){
+            .container{
+                width: 768px;
+            }
+        }

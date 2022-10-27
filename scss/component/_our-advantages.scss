@@ -1,0 +1,86 @@
+//invisible-element
+.invisible{
+    display: none;
+}
+//our advantages
+.text-item{
+display: flex;
+column-gap: 30px;
+}
+.advantages-title{
+    font-weight: 700;
+    line-height: $line-height-a;
+    margin-bottom: 10px;
+}
+    .advantages-parag{
+        line-height: $line-height-c;
+        color: $primary-text-color;
+    } 
+//advantages svg
+.item-svg{
+@extend %disply_flex-center;
+min-width: 270px;
+min-height: 120px;
+background-color: $accent-background-color;
+border-radius: $border-radius;
+margin-bottom: 30px;
+}
+.svg{
+    width: 70px;
+    height: 70px;
+}
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .text-item{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0px;
+        gap: 30px;
+        }
+        .item:first-child{
+            padding: 60px 0 0 0;
+        }
+        .item:last-child{
+            padding: 0 0 60px 0;
+        }
+        .item-svg{
+            min-width: 450px;
+            min-height: 120px;
+            }
+}
+//our__advantages
+//tablet-wercion
+@media(max-width: 768px){
+    .text-item{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0px;
+        gap: 30px
+        }
+        .advantages-parag{
+            width: 354px;
+        } 
+        .item-svg{
+            width: 354px;
+            height: 120px;
+            }
+}
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .text-item{
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 0px;
+        gap: 30px;
+        }
+        .item:first-child{
+            padding: 60px 0 0 0;
+        }
+        .item:last-child{
+            padding: 0 0 60px 0;
+        }
+        .item-svg{
+            min-width: 450px;
+            min-height: 120px;
+            }
+}

@@ -1,0 +1,79 @@
+//tablet-wercion
+@media(max-width: 768px){
+    .footer-contak{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: baseline;
+        margin-bottom: 60px;
+    }
+    .footer-in{
+        display: block;
+    }
+    .footer-web{
+        font-size: $font-size-f;
+        line-height: $line-height-g;
+    }
+    .footer-web,
+    .footer-adres,
+    .send__title,
+    .send__input,
+    .join-title,
+    .join-list{
+        justify-content: center;
+        text-align: center;
+    }
+    .join{
+        margin-left: 165px;
+    }
+    .send{
+        display: block;
+        text-align: center;
+        &__input{
+            margin-bottom: 20px;
+            text-align: left;
+            width: 450px;
+        }
+        &__button{
+            margin: 0 auto;
+        }
+    }
+}
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .footer-contak{
+        display: block;
+    }
+    .footer-in{
+        display: block;
+    }
+    .footer-web{
+        font-size: $font-size-f;
+        line-height: $line-height-g;
+    }
+    .footer-web,
+    .footer-adres,
+    .send__title,
+    .send__input,
+    .join-title,
+    .join-list{
+        justify-content: center;
+        text-align: center;
+    }
+    .join{
+        margin-left: 0;
+        margin: 60px 0 60px 0;
+    }
+    .send{
+        display: block;
+        text-align: center;
+        &__input{
+            margin-bottom: 20px;
+            text-align: left;
+            width: 450px;
+        }
+        &__button{
+            margin: 0 auto;
+        }
+    }
+}

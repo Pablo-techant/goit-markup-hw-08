@@ -1,0 +1,192 @@
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .container{
+        width: auto;
+    }
+    .mobail{
+        display: none;
+    }
+    .mobail__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 11px;
+        background-color: $nav-color-b;
+        margin-left: auto;
+        //navigation-effects
+        &:hover.mobail__icon
+        &:focus.mobail__icon{
+            fill: $nav-color;
+            stroke: $nav-color;
+        }
+    }
+    .mobail__icon{
+        //animation
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .nav-web{
+        font-size: $font-size-f;
+        line-height: $line-height-g;
+        padding: 16px 0 16px 0;
+    }
+    .burger{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $standart-background-color;
+        display: block;
+        width: 480px;
+        height: 796px;
+        padding: 10px 4px 48px 40px;
+        height: 796px;
+        visibility: visible;
+        //animation
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .burger__menu{
+        margin: 0 0 302px 0;
+        display: block;
+    }
+    .burger__inform.curren{
+        color: $nav-color;
+    }
+    .burger__inform{
+        font-weight: 500;
+        font-size: $font-size-g;
+        line-height:  $line-height-u;
+        text-align: center;
+        letter-spacing: $letter-spacing-a;
+        color: $title-text-color;
+        //animation
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        //navigation-effects
+        &__inform:hover
+        &__inform:focus{
+            color: $nav-color;
+        }
+    }
+    .burge-item{
+        display: block;
+        margin: 32px 0 32px 0;
+    }
+    .burger__contac{
+        margin: 0 0 64px 0;
+    }
+    .burger__details{
+        display: block;
+        font-weight: 500;
+        font-size: $font-size-o;
+        line-height: $line-height-v;
+        letter-spacing: $letter-spacing-a;
+        color: $nav-color;
+        margin-bottom: 32px;
+
+    }
+    .burger__mail{
+        display: block;
+        font-weight: 500;
+        font-size: $font-size-f;
+        line-height: $line-height-g;
+        letter-spacing: $letter-spacing-a;
+        color: $primary-text-color;
+    }
+    .mobail__butclose{
+        padding: 10px 22px;
+        margin-left: 373.33px;
+        display: block;
+        background-color: $nav-color-b;
+        cursor: pointer;
+        //navigation-effects
+        &:hover.mobail__iconclose
+        &:focus.mobail__iconclose{
+            fill: $nav-color;
+            stroke: $nav-color;
+        }
+    }
+    .mobail__iconclose{
+        //animation
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobail__link-item{
+        font-weight: 500;
+        font-size: $font-size-c;
+        line-height:  $line-height-t;
+        letter-spacing: $letter-spacing-a;
+        color: $nav-color;
+    }   
+    .mobail__link-list{
+        display: flex;
+        margin-top: 64px;
+    } 
+    .mobail__adres:last-child{
+        padding-left: 10px;
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    .mobail__adres:first-child{
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    } 
+    .mobail__adres:nth-child(2){
+        padding: 0 10px 0 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+    .mobail__adres:nth-child(3){
+        padding: 0 10px 0 10px;
+    } 
+    .is-check{
+        opacity: 0;
+        visibility: hidden;
+        //animation
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+//navigation effects
+    .mobail__butclose:hover .mobail__iconclose,
+    .mobail__button:focus .mobail__iconclose,
+    .mobail__button:hover .mobail__iconclose,
+    .mobail__button:focus .mobail__iconclose{
+        fill: $nav-color;
+        stroke: $nav-color;
+    } 
+}
+//tablet-wercion
+@media(max-width: 768px){
+    .nav-web{
+        font-size: $font-size-f;
+        line-height: $line-height-g;
+        padding: 26px 0 26px 0;
+        margin-right: 88px;
+    }
+    .nav-contacts{
+        display: block;
+    }
+    .contacts-phone,
+    .contacts-mail{
+        font-weight: 500;
+        font-size: $font-size-e;
+        line-height: $line-height-g;
+        letter-spacing: $letter-spacing-a;
+        padding: 0;
+    }
+    .navigations:nth-child(1){
+        padding: 21px 0 10px 0;
+    }
+
+    .mail-icon{
+        fill: currentColor;
+        stroke: currentColor;
+        width: 14px;
+        height: 10px;
+        padding: 1.5px 0 0 0;
+    }
+    .phone-icon{
+        fill: currentColor;
+        stroke: currentColor;
+        width: 10px;
+        height: 14px;
+    }
+    
+}

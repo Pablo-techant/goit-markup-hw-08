@@ -1,0 +1,139 @@
+//heder
+//navigation
+//navigation-text-options
+.hero-one.line{
+    border-bottom: 1px solid $border-color;
+    }
+    .menu-link.current{
+        color: $nav-color;
+    }
+            .h-nav{
+                display: flex;
+                &__current::after{
+                    content: "";
+                    display: block;
+                    border-bottom: 4px solid $nav-border-color;
+                    border-radius: $border-radius;
+                    //animation
+                    @extend %animation_border-color;
+                }
+            }
+            .nav-web{
+                font-family: Raleway;
+                font-style: $main-font-style;
+                font-size: $font-size-a;
+                line-height: $line-height-e;
+                color: $nav-color;
+                margin-right: 93px;
+                text-decoration: none;
+                padding: 24px 0 24px 0;
+                display: block;
+                //animation
+                @extend %animation_color;
+                //navigation-effects
+                &:hover, 
+                &:focus, 
+                &:active{
+                    color: $nav-color-one;
+                }
+            }
+            .nav-studio{
+                color: $title-text-color;
+                //animation
+                @extend %animation_color;
+                &:hover, 
+                &:focus,
+                &:active{
+                    color: $nav-color
+                } 
+            }
+            .mobail{
+                display: flex;
+                width: 100%;
+                height: 84px;
+            }
+            .mobail__button{
+                display: none;
+            }
+            .burger{
+                display: none;
+            }
+            .nav-menu{
+                gap: 50px;
+            }
+                .menu-link, 
+                .menu-contacts, 
+                .contacts-mail, 
+                .contacts-phone{
+                    text-decoration: none;
+                    color: $title-text-color;
+                    margin-left: auto;
+                    font-style: $main-font-style;
+                    font-weight: 500;
+                    line-height: $line-height-a;
+                    letter-spacing: $letter-spacing-a;
+                    padding: 32px 0 32px 0;
+                    display: block;   
+                }
+                .nav-contacts{
+                    gap: 30px;
+                    margin-left: auto;
+                }
+                .contacts-mail,
+                .contacts-phone{
+                    color: $primary-text-color;
+                    padding-right: 0;
+                }              
+//navigation effects
+    .menu-link:hover, 
+    .menu-link:focus,
+    .menu-link:active,
+    .menu-contacts:hover, 
+    .menu-contacts:focus, 
+    .menu-contacts:active{
+        color: $nav-color;
+    }
+        .contacts-phone:hover, 
+        .contacts-phone:focus,
+        .contacts-phone:active, 
+        .contacts-mail:hover,
+        .contacts-mail:focus, 
+        .contacts-mail:active{
+            color:  $nav-color;  
+        }       
+//navigation-animation-header
+.menu-link,
+.menu-contacts, 
+.contacts{ 
+//animation
+@extend %animation_color;
+}
+//head svg
+.contacts{
+    display: flex;
+    gap: 10px;
+    margin-left: auto;   
+}
+    .mail-icon{
+        fill: currentColor;
+        stroke: currentColor;
+        //animation
+        @extend %animation_fill;
+        @extend %animation_stroke;
+    }
+    .phone-icon{
+        fill: currentColor;
+        stroke: currentColor;
+        //animation
+        @extend %animation_fill;
+        @extend %animation_stroke;
+    }
+//svg effects
+.mail-icon:hover, 
+.mail-icon:focus, 
+.mail-icon:active,
+.phone-icon:hover, 
+.phone-icon:focus, 
+.phone-icon:active{
+    fill: currentColor;
+}

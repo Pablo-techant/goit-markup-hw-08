@@ -1,0 +1,26 @@
+//tablet-wercion
+@media(max-width: 768px){
+        .main-launnch, .background{
+            background-image: linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+            rgba(47, 48, 58, 0.5)), url("../img/background/backgroudportfolio2.jpg");
+    }
+    .slogan-launnch{
+        width: 360px;
+        font-weight: 900;
+        font-size: $font-size-a;
+        line-height:  $line-height-w;
+      }
+}
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .main-launnch, .background{
+        background-image: linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+        rgba(47, 48, 58, 0.5)), url("../img/background/backgroudportfolio1.jpg");
+    }
+    .slogan-launnch{
+        width: 360px;
+        font-weight: 900;
+        font-size: $font-size-a;
+        line-height:  $line-height-w;
+      }
+}

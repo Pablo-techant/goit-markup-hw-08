@@ -1,0 +1,51 @@
+//what we do
+.we-do{
+    padding: 0 0 94px 0;
+    }
+    .what-title{
+            margin: 0 0 50px 0;
+            font-weight: 700;
+            font-size: $title-font-size;
+            line-height: $line-height-g;
+            text-align: center;
+    }
+        .what-we{
+            display: flex;
+            column-gap: 30px;
+            //what-we-do-overlay
+            &-wrapper{
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+            }
+            &__overlay{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 370px;
+                height: 70px;
+                background: $background-overlay-color-d;
+                @extend %disply_flex-center;
+            }    
+            &__mark{
+                font-weight: 700;
+                line-height: $line-height-a;
+                text-transform: uppercase;
+                color: $accent-text-color;
+            }       
+        }
+//what we do
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .we-do{
+        display: none;
+    }
+}
+
+// tablet-wercion
+@media(max-width: 768px){
+    .we-do{
+        display: none;
+    }
+}

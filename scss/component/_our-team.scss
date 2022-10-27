@@ -1,0 +1,80 @@
+//our team
+.team{
+    background-color: $accent-background-color;
+    text-align: center;
+}
+    .our-teamtitle{
+        font-weight: 700;
+        font-size: $title-font-size;
+        line-height: $line-height-g;
+        text-align: center;
+        margin: 0 0 50px 0;
+    }
+        .team-wrap__partone,
+        .team-wrap__parttwo{
+            display: flex;
+            gap: 30px;
+        }
+        .team__item{
+            display: flex;
+            gap: 30px;
+        }
+            .team-wrapper{  
+                padding: 30px 0 30px 0;
+            }
+                .team__item-part{
+                    background-color: $standart-background-color;
+                    box-shadow: 0 4px 4px $shadow-color;
+                    border-radius: 0 0 4px 4px;
+                }
+                     .team-name{
+                        font-weight: 500;
+                        font-size: $accent-font-size;
+                        line-height: $line-height-b;
+                        text-align: center;
+                        margin: 0 0 10px 0;    
+                    }
+                    .team-position{
+                        font-size: $accent-font-size;
+                        line-height: $line-height-b;
+                        text-align: center;
+                        color: $primary-text-color;
+                        margin: 0 0 16px;
+                    }
+//team-link-svg
+.list-team{
+    @extend %disply_flex-center;
+    gap: 10px;
+    &__item{
+        display: table;
+        } 
+    &__link{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        //animation
+        @extend %animation_background-color;
+        @extend %animation_box-shadow;
+        &:hover, 
+        &:focus,
+        &:active{
+         background-color: $nav-color;
+         @extend %box-shadow-four-width;
+        }    
+    }
+    &__icon{
+        fill: $nav-color-c;
+    }
+    &__svg{
+        @extend %animation_fill;
+    }                      
+}
+//team-link-svg-effects
+.list-team__link:hover .list-team__svg, 
+.list-team__link:focus .list-team__svg,
+.list-team__link:active .list-team__svg{
+    fill: $nav-color-b;
+}      

@@ -1,0 +1,87 @@
+@media(max-width: 768px){
+    .modal__backdrop{
+        width: 768px;
+        height: 795px;
+    }
+    .modal__window{
+        width: 450px;
+        min-height: 609px;
+    }
+    .form__box{
+        width: 370px
+    }
+    .form__title{
+        width: 370px;
+    }
+    .form__group{
+        width: 370px;
+    }
+    .form__input{
+        width: 328px;
+    }
+        .form__paragraf{
+            font-weight: 400;
+            font-size: $font-size-e;
+            line-height: $line-height-g;
+            display: inline;
+            padding-left: 0;
+        } 
+        .form__checsvg{
+            position: absolute;
+            top: 0px;
+            left: 4px;
+            fill: $nav-color-b;
+        }
+        .form__icon{
+            margin: 0px 7px 0 0;  
+        }
+        .form__contract{
+            margin-left: 0;
+        }
+}
+@media(max-width: 480px){
+    .modal__backdrop{
+        width: 480px;
+        height: 795px;
+    }
+    .modal__window{
+        width: 450px;
+        min-height: 609px;
+    }
+    .form__box{
+        width: 370px
+    }
+    .form__title{
+        width: 370px;
+        font-weight: 700;
+        font-size: $font-size-d;
+        line-height: $line-height-t;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+    .form__group{
+        width: 370px;
+    }
+    .form__input{
+        width: 328px;
+    }
+        .form__paragraf{
+            font-weight: 400;
+            font-size: $font-size-e;
+            line-height: $line-height-g;
+            display: inline;
+            padding-left: 0;
+        } 
+        .form__checsvg{
+            position: absolute;
+            top: 0px;
+            left: 4px;
+            fill: $nav-color-b;
+        }
+        .form__icon{
+            margin: 0px 7px 0 0;  
+        }
+        .form__contract{
+            margin-left: 0;
+        }
+}

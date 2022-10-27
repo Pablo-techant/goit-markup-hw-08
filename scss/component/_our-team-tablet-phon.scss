@@ -1,0 +1,39 @@
+//our-team
+//tablet-wercion
+@media(max-width: 768px){
+    .our-teamtitle{
+        font-weight: 700;
+        font-size:  $font-size-p;
+        line-height: $line-height-x;
+        margin-bottom: 30px;
+    }
+    .team__item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .team-wrapper{  
+        width: 354px;
+    }
+}
+//mobail__phon-wercion
+@media(max-width: 480px){
+    .team{
+        padding-left: 15px;
+    }
+    .team-container{
+        padding: 60px 0 60px 0;
+    }
+    .our-teamtitle{
+        font-weight: 700;
+        font-size:  $font-size-p;
+        line-height: $line-height-x;
+        margin-bottom: 30px;
+    }
+    .team__item{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .team-wrapper{  
+        width: 450px;
+    }
+}
