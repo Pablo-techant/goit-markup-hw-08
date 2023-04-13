@@ -1,0 +1,43 @@
+//what we do
+.we-do {
+    @include section ( 
+        $pd: 0 0 94px 0,
+     )
+}
+    .what-title{    
+        @include font-title;
+        text-align: center;
+    }
+        .what-we {
+            display: flex;
+            column-gap: 30px;
+            //what-we-do-overlay
+            &-wrapper {
+                position: relative;
+                margin-left: auto;
+                margin-right: auto;
+                overflow: hidden;
+            }
+            &__overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 370px;
+                height: 70px;
+                background: $background-overlay-color-d;
+                @extend %disply_flex-center;
+            }    
+            &__mark {
+                @include font (
+                    $f-w: 700,    
+                    $c: $accent-text-color,
+                );
+                text-transform: uppercase;
+            }       
+        }
+//what we do
+@media(max-width: 1199px) {
+    .we-do {
+        display: none;
+    }
+}

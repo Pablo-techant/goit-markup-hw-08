@@ -1,0 +1,62 @@
+//customers-section
+
+//customers-link-svg
+.list-item{
+    @extend %disply_flex-center;
+    gap: 30px;
+    display: flex;
+    @media screen and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__cust{
+        display: table;
+        width: 170px;
+        height: 92px;
+        @media (max-width: 1199px) {
+            flex-basis: 30.624%;
+        };
+        @media (max-width: 767px) {
+            flex-basis: 46.668%;
+        };
+        @media (max-width: 479px) {
+            flex-basis: 100%;
+        };
+    }
+        &__link{
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid $border-color; 
+            border-radius: $border-radius;
+            //animation
+            @extend %animation_border-color;
+        }
+
+        //customers-link-effects
+        
+        &__link:hover, 
+        &__link:focus,
+        &__link:active{
+            border: 1px solid $nav-color; 
+        }
+            &__icon{
+                fill: $nav-color-c;
+            }
+                &__svg{
+                    position: absolute;
+                    //animation
+                    @extend %animation_fill;
+                }
+
+                //customers-svg-effects
+
+                &__link:hover .list-item__svg, 
+                &__link:focus .list-item__svg,
+                &__link:active .list-item__svg{
+                    fill: $nav-color;
+                }   
+}            
+
+    

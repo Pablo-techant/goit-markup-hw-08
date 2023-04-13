@@ -1,0 +1,289 @@
+//modal-window-with-backdrop
+.modal__backdrop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: $background-overlay-color-c;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    @extend %disply_flex-center;
+    //animation
+    @extend %animation_four-backdrop;
+}
+    .is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    //animation
+    @extend %animation_four-backdrop;
+    pointer-events: none;
+    }
+        .modal__window {
+            @extend %position_absolute-center;
+            padding: 40px;
+            width: 528px;
+            min-height: 581px;
+            background: $background-overlay-color-b;
+            overflow: auto;
+            border-radius: $border-radius;
+            z-index: 1;
+            display: block;
+            //animation
+            @extend %animation_four-backdrop;
+            @media (max-width: 769px) {
+                width: 450px;
+                min-height: 609px;
+            };
+            @media (max-width: 478px) {
+                width: calc(290px + (448 - 290) * ((100vw - 320px) / (477 - 320)));
+                padding: calc(15px + (40 - 15) * ((100vw - 320px) / (477 - 320)));
+            };
+        }
+
+            .modal__buttonclose {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                border-radius: 50%;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                width: 30px;
+                height: 30px;
+                padding: 0;
+                background: $nav-color-b;
+                @extend %disply_flex-center;
+                &:hover .close__vectorsvg,
+                &:focus .close__vectorsvg,
+                &:active .close__vectorsvg{
+                    fill: $nav-color;
+                    stroke: $nav-color;
+                }
+            }
+                .close__vectorsvg {
+                    @extend %position_absolute-center;
+                    //animation
+                    @extend %animation_fill;
+                    @extend %animation_stroke;
+                }    
+                .form__group {
+                    width: 448px;
+                    @media (max-width: 769px) {
+                        width: 370px;
+                    };
+                    @media (max-width: 478px) {
+                        width: 260px;
+                    };   
+                }
+                .form__title {
+                    width: 100%;
+                    @include font (
+                        $f-w: 700, 
+                        $f-s: $f-s_20, 
+                        $l-h: $l-h-r, 
+                        $l-s: $l-s-b, 
+                        $c: $t_text-color);
+                        display: block;
+                        text-align: center;
+                        justify-content: center;
+                    @media (max-width: 768px) {
+                        line-height: $l-h-z;
+                    };
+                    @media (max-width: 478px) {
+                        font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (479 - 320)));
+                        width: calc(260px + (370 - 260) * ((100vw - 320px) / (478 - 320)));  
+                    };
+                }
+                    .form__name {
+                        display: block;
+                        @include font (
+                        $f-w: 400, 
+                        $f-s: $f-s_12, 
+                        $l-h: $l-h-g, 
+                        $l-s: $l-s-d, 
+                        $c: $primary-text-color);
+                        margin: 10px 0 12px 0;
+                    }
+                        .form__box {
+                            position: relative;
+                            width: 100%;
+                            height: 40px;
+                            border: 1px solid $border-color; 
+                            border-radius: $border-radius;
+                            //animation
+                            @extend %animation_border-color;
+                            @media (max-width: 478px) {
+                                width: calc(260px + (368.4 - 260) * ((100vw - 320px) / (477 - 320)));
+                            };
+                               
+                        }
+                            .form__svg {
+                                position: absolute;
+                                z-index: 2;
+                                top: 11px;
+                                left: 12px;
+                            }
+                                .form-icon {
+                                //animation
+                                @extend %animation_fill;
+                                }
+                                .form__input {
+                                    padding: 11px 0 11px 38px;
+                                    border-radius: $border-radius;
+                                    width: 100%;
+                                    height: 100%;
+                                    @include font (
+                                        $f-w: 400, 
+                                        $f-s: $f-s_12, 
+                                        $l-h: $l-h-g, 
+                                        $l-s: $l-s-d, 
+                                        $c: $t_text-color);
+                                    background-color: $nav-color-b;
+                                }
+                        .form__coment {
+                            width: 100%;
+                            min-height: 120px;
+                            overflow: auto;
+                            padding: 12px 16px;
+                            border: 1px solid $border-color; 
+                            border-radius: $border-radius;
+                            //animation
+                            @extend %animation_border-color;
+                            @media (max-width: 478px) {
+                                width: calc(260px + (368.4 - 260) * ((100vw - 320px) / (477 - 320)));
+                            };
+                        }
+                            .form__text {
+                                width: 100%;
+                                height: 100%;
+                                @include font (
+                                    $f-w: 400, 
+                                    $f-s: $f-s_12, 
+                                    $l-h: $l-h-g, 
+                                    $l-s: $l-s-d, 
+                                    $c: $t_text-color);
+                                outline: none;
+                            }
+
+// chekbox
+
+                            .form-group {
+                                margin: 20px 0 31px 12px;
+                                @media (max-width: 768px) {
+                                    margin: 20px 0 31px 0;
+                                };
+                                @media (max-width: 478px) {
+                                    flex-direction: column;
+                                    align-items: center;
+                                    text-align: center;
+                                    margin: 20px auto 0 auto;
+                                    width: calc(250px + (370 - 250) * ((100vw - 320px) / (478 - 320)));
+                                };
+
+                            }
+                            .form-accept {
+                                @media (max-width: 768px) {
+                                    font-size: 12px;
+                                    line-height: $l-h-g;
+                                    margin-left: 0;
+                                };
+                                @media (max-width: 478px) {
+                                    font-size: calc(9px + (12 - 9) * ((100vw - 320px) / (478 - 320)));
+                                };
+                                @include font (
+                                    $f-w: 400, 
+                                    $f-s: $f-s_14, 
+                                    $l-h: $l-h-c, 
+                                    $l-s: $l-s-b, 
+                                    $c: $primary-text-color);
+                                       
+                              }
+                            .form-accept-chekbox {
+                                position: absolute;
+                                appearance: none;
+                                display: inline-block;
+                            }
+                            .checkbox {
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 16px;
+                                height: 16px;
+                                border: 1.25px solid $nav-color-one;
+                                border-radius: 2px;
+                                overflow: hidden;
+                                background-repeat: no-repeat;
+                                background-origin: content-box;
+                                background-position: 50% 50%;
+                                @extend %animation_border-color;
+                                @extend %animation_background-color;
+                            }
+                              
+                            .form-accept-chekbox:checked + .checkbox {
+                                background-color: $nav-color;
+                                border-color:  $nav-color;
+                            }
+                              
+                            .form-accept-chekbox:checked + .checkbox + .checked-icon {
+                                fill: $nav-border-color;
+                                background-size: contain;
+                                background-origin: border-box;
+                                
+                            }
+                            .checked-icon {
+                                width: 14px;
+                                height: 14px;
+                                fill: $nav-color-b;
+                            }
+                              
+                            .form-accept-text {
+                                padding-left: 8px;
+                            }
+                              
+                            .web-privacy {
+                                color: $nav-border-color;
+                                text-decoration: underline;
+                            }  
+                    .form__buttonsend {
+                        @include font (
+                            $f-w: 700, 
+                            $f-s: $f-s_16, 
+                            $l-h: $l-h-p, 
+                            $l-s: $l-s-c, 
+                            $c: $nav-color-b);
+                        background-color: $nav-color;
+                        display: block;
+                        margin: 0 auto;
+                        //animation
+                        @extend %animation_box-shadow;
+                        @extend %animation_background-color;
+                        //navigation-effects
+                        &:hover,
+                        &:focus,
+                        &:active {
+                            @extend %box-shadow-standard;
+                            background-color: $nav-btnhover;
+                        };
+                        @media (max-width: 478px) {
+                            position: absolute;
+                            bottom: 15px; 
+                            left: calc(45px + (120.5 - 45) * ((100vw - 320px) / (478 - 320)));
+                        }; 
+                    }                  
+//form-navigation-effects 
+.form__box:focus-within {
+    border-color: $nav-color; 
+    fill: $nav-color;
+} 
+.form__coment:focus-within {
+    border-color: $nav-color; 
+}        
+    .form__box:hover, .form__coment:hover {
+        border-color: $nav-color;
+        cursor: pointer;
+    }
+    .form__box:hover .form-icon, .form__box:focus .form-icon, 
+    .form__box:active .form-icon {
+        fill: $nav-color;
+    }

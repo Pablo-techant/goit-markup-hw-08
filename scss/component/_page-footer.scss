@@ -1,0 +1,224 @@
+ //footer-section
+
+.page-footer {
+    background-color: $primary-background-color;
+    padding: 60px 0 60px 0;
+    @media (max-width: 371px) {
+        padding: 40px 0 40px 0;
+    };
+}
+.footer-wrap {
+     display: flex;
+     align-items: baseline;
+     @media (max-width: 1199px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+.footer-inner {
+    display: flex;
+    align-items: baseline;
+    column-gap: 94px;
+    @media (max-width: 1199px) {
+        column-gap: 0px;
+    };
+    @media (max-width: 567px) {
+        display: block;
+        margin: 0 auto;
+    };
+}
+    .footer-web, 
+    .footer-adres {
+        @media (max-width: 567px) {
+            display: block;
+            text-align: center;
+        };
+    }
+        .contak-inner {
+            @media (max-width: 1199px) {
+                margin-right: calc(165px + (257 - 165) * ((100vw - 768px) / (1198 - 768) ))
+            };
+            @media (max-width: 567px) {
+                margin: 0 0 60px 0;
+            };
+            @media (max-width: 371px) {
+                margin: 0 0 40px 0;
+            };
+        }
+        .footer-web {
+            @include logo;
+                @media (max-width: 768px) {
+                    @include logo (
+                        $f-s: $f-s_24, 
+                        $l-h: $l-h-g, 
+                        $l-s: $l-s-b, 
+                    )  
+                }; 
+        }
+        .footer-address {
+            margin-top: 28px;
+        }
+            .footer-adres:not(:last-child) {
+                margin: 0 0 8px 0;
+            }
+                .footer-stud, .address-location {
+                    color: $accent-text-color;
+                        //animation
+                        @extend %animation_color;
+                } 
+                .address-location {
+                    @include font (  
+                        $c: $accent-text-color,
+                    );
+                } 
+                .address-mail, 
+                .address-phone {
+                    @include font (  
+                        $c: $text-color-a,
+                    );
+                    display: block;
+                }
+                .address-mail, .address-phone {
+                    color: $text-color-a;
+                }
+                           
+ //footer-link-svg
+
+ .join {
+    display: grid;
+    @media (max-width: 1199px) {
+        margin-left: auto;
+    };
+    @media (max-width: 480px) {
+        margin-top: 60px;
+    };
+    @media (max-width: 371px) {
+        margin-top: 40px;
+    };
+}
+.join-title {
+    @include font (
+        $f-w: 700,  
+        $c: $accent-text-color,
+    );
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    align-self: flex-end;
+    display: block
+}
+    .join-list {
+        @extend %disply_flex-center;
+            gap: 10px;
+            &__link {
+                display: flex;
+                justify-content: center;
+                width: 44px;
+                height: 44px;
+                vertical-align: middle;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.1);
+                //animation
+                    @extend %animation_background-color;
+                    @extend %animation_box-shadow;  
+               &:hover, 
+               &:focus,
+               &:active {
+                   background-color: $nav-color;
+                   @extend %box-shadow-four-black;
+                }
+            }
+                &__icon {
+                    fill: $nav-color-b;
+                }
+                    &__svg {
+                       //animation
+                        @extend %animation_fill; 
+                    }  
+    }
+         
+ //footer-send-form
+
+.send {
+    margin-left: auto;
+    gap: 12px;
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: 1199px) {
+        margin: 60px auto 0 auto;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+    };
+    @media (max-width: 371px) {
+        margin: 40px auto 0 auto;
+    };
+    &__title {
+        @include font (
+            $f-w: 700,  
+            $c: $accent-text-color,
+        );
+        text-transform: uppercase;
+        display: block;
+        margin: 0 0 20px 0;
+    }
+                &__input {
+                    width: 358px;
+                    height: 50px;
+                    padding-left: 16px;
+                    @include font ( 
+                        $f-w: 400, 
+                        $f-s: $f-s_16, 
+                        $l-h: $l-h-s,  
+                        $c: $text-color-a,
+                    );
+                    background-color: $primary-background-color;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: $border-radius;
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+                    @media (max-width: 1199px) {
+                        width: 450px;
+                    };
+                    @media (max-width: 479px) {
+                        width: calc(260px + (450 - 260) * ((100vw - 320px) / (479 - 320)));
+                    };
+                    
+                   //animation
+                   @extend %animation_box-shadow;
+                    //navigation-effects
+                   &:hover, 
+                   &:focus, 
+                   &:active{
+                       @extend %box-shadow-four-black;
+                    }
+                }
+
+    //footer-btn
+
+                &__button {
+                   @extend %disply_flex-center;
+                    column-gap: 10px;
+                    background-color: $nav-color;
+                    @include font ( 
+                        $f-w: 700, 
+                        $f-s: $f-s_16, 
+                        $l-h: $l-h-b, 
+                        $l-s: $l-s-c, 
+                        $c: $accent-text-color,
+                    );
+                        //animation
+                            @extend %animation_box-shadow;
+                            @extend %animation_background-color;
+                    //navigation-effects
+                   &:hover, 
+                   &:focus, 
+                   &:active {
+                       @extend %box-shadow-four-black;
+                       background-color: $nav-btnhover;
+                  }
+                }
+                &__svg {
+                    fill: $nav-color-b;
+                }
+}

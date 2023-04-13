@@ -1,0 +1,323 @@
+
+// pc, tablet header
+.line {
+    border-bottom: 1px solid $border-color;
+}
+.nav__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+    .nav__line {
+        display: flex;
+    }
+        .nav__logo,
+        .nav__logotwo {
+            display: flex;
+            align-items: center;
+            @include logo;
+            @media (max-width: 1200px) {
+                @include logo (
+                    $f-s: $f-s_24, 
+                    $l-h: $l-h-e
+                );
+            }
+        }
+            .nav__logotwo {
+                color: $t_text-color;
+                margin-right: calc(88px + (93 - 88) * ((100vw - 769px) / (1200 - 769)));
+                @media (max-width: 767px) {
+                    margin-right: 0;
+                };
+            } 
+        .nav-menu {
+            display: flex;
+            gap: 50px;
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+            .nav-menu__link {
+                display: block;
+                padding: 32px 0 32px 0;
+                @include font ( 
+                    $f-w: 500,  
+                    $l-s: $l-s-a);
+                @extend %animation_color;
+                &:hover, 
+                &:focus,
+                &:active {
+                    color: $nav-color
+                }  
+            }
+            .nav-menu__link:first-child {
+                padding: 32px 0 28px 0;
+            }
+            .nav__current::after {
+            content: "";
+                display: block;
+                border-bottom: 4px solid $nav-border-color;
+                border-radius: $border-radius;
+                //animation
+                @extend %animation_border-color;
+            }
+            .nav-menu__link.current {
+             color: $nav-color;
+            }
+        .nav-contacts {
+            display: flex;
+            margin-left: auto;
+            gap: 40px;
+            @media (max-width: 1199px) {
+                display: flex;
+                flex-direction: column;
+                align-self: center;
+                gap: 10px;
+            }
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+            .envelope,
+            .phone {
+                fill: currentColor;
+                stroke: currentColor;
+            //animation
+                @extend %animation_fill;
+                @extend %animation_stroke;
+            }  
+                .envelope {
+                    @media (max-width: 1199px) {
+                        width: 14px;
+                        height: 10px;
+                    }
+                }
+                .phone {
+                 @media (max-width: 1199px) {
+                        width: 10px;
+                        height: 14px;
+                    }
+                }
+            .nav-cont__link {
+                padding: 32px 0 32px 0;
+                display: flex;
+                gap: 10px; 
+                @include font ( 
+                    $f-w: 500,  
+                    $l-s: $l-s-a
+                );
+                color: $primary-text-color;
+                &:hover, 
+                &:focus,
+                &:active{
+                    color: $nav-color;
+                }
+                @media (max-width: 1199px) {
+                    padding: 0 0 0 0;
+                    gap: 8px;
+                    @include font ( 
+                        $f-w: 500, 
+                        $f-s: $f-s_12, 
+                        $l-h: $l-h-g, 
+                        $l-s: $l-s-a, 
+                        $c: $primary-text-color
+                    )
+                };
+            }
+
+    // mobail-menu-header
+
+    .burger {
+        margin-left: auto;
+        //animation
+        @extend %animation_fill;
+        @extend %animation_stroke;
+        &:hover.burge__off,
+        &:focus.burge__off,
+        &:active.burge__off {
+            fill: $nav-color;
+            stroke: $nav-color;
+        }
+        @media (max-width: 1200px), (min-width: 1200px) {
+            display: none;
+        };
+        @media (max-width: 767px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            width: 40px;
+            height: calc(60px + (80 - 60) * ((100vw - 480px) / (768 - 480)));
+        }
+    }
+    .mob_aside {
+        @media (max-width: 1200px), (min-width: 1200px) {
+            display: none;
+        };
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            padding: 48px 40px;
+            background-color: $standart-background-color;
+            opacity: 1;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+            //animation
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        };
+    }
+    .is-check {
+        @media (max-width: 767px) {
+            padding: 48px 40px;
+            opacity: 0;
+            visibility: hidden;
+            //animation
+            transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+       };
+    }
+        .burger__clos {
+            stroke: $nav-color-one;
+            //animation
+            @extend %animation_fill;
+            @extend %animation_stroke;
+            @media (min-width: 767px) {
+                display: none;
+            }
+            @media (max-width: 767px) {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 69.33px;
+                height: 60.67px;        
+                &:hover.burger__iconclos,
+                &:focus.burger__iconclos,
+                &:active.burger__iconclos {
+                    fill: $nav-color;
+                    stroke: $nav-color;
+                }
+        }
+        }
+        .mobnav-menu {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-content: flex-start;
+                height: 100%;
+                gap: 32px;
+        } 
+            .mobnav-menu__link {
+                @include font (  
+                    $f-w: 500, 
+                    $f-s: $f-s_40, 
+                    $l-h: $l-h-u, 
+                    $l-s: $l-s-a);
+                }
+            }
+            .mobnav-menu__link.current {
+                color: $nav-color;
+            }
+        .mobnav-contacts {
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column-reverse;
+                gap: 32px;
+                margin-top: auto;
+            }
+        }
+            .mail {
+                @media (max-width: 767px) {
+                    padding: 0 0 0 0;
+                    @include font (  
+                        $f-w: 500, 
+                        $f-s: $f-s_24, 
+                        $l-h: $l-h-g, 
+                        $l-s: $l-s-a,
+                        $c: $primary-text-color
+                        );
+                }
+                @media (max-width: 479px) {
+                    font-size: calc(18px + (24 - 18) * ((100vw - 310px) / (1200 - 310)));
+                }
+            }
+            .tel {
+                @media (max-width: 767px) {
+                    padding: 0 0 0 0;
+                    //animation
+                    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                    @include font (  
+                        $f-w: 500, 
+                        $f-s: $f-s_34, 
+                        $l-h: $l-h-v, 
+                        $l-s: $l-s-a,
+                        $c: $nav-color   
+                        );
+                        &:hover, 
+                        &:focus,
+                        &:active {
+                            color: $primary-text-color;
+                        }
+                }
+                @media (max-width: 479px) {
+                    font-size: calc(26px + (34 - 26) * ((100vw - 310px) / (479 - 310)));
+                }
+            }
+        .mob-menu {
+            @media (max-width: 767px) {
+                display: flex;
+                margin-top: 64px;
+            }
+        }
+            .mob-menu_soc:first-child {
+                padding-right: 10px;
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+            } 
+            .mob-menu_soc:last-child {
+                padding-left: 10px;
+                border-left: 1px solid rgba(33, 33, 33, 0.2);
+            }
+            .mob-menu_soc:nth-child(2) {
+                padding: 0 10px 0 10px;
+                border-right: 1px solid rgba(33, 33, 33, 0.2);
+            }
+            .mob-menu_soc:nth-child(3) {
+                padding: 0 10px 0 10px;
+            }
+                .mob-menu_network {
+                    @media (max-width: 1200px), (min-width: 1200px) {
+                        display: none;
+                    };
+                    @media (max-width: 767px) {
+                        display: block;
+                        //animation
+                        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                        @include font (  
+                            $f-w: 500, 
+                            $f-s: $f-s_18, 
+                            $l-h: $l-h-t, 
+                            $l-s: $l-s-a,
+                            $c: $nav-color   
+                        );
+                    &:hover, 
+                    &:focus,
+                    &:active {
+                        color: $primary-text-color;
+                    }
+                    };
+                    @media (max-width: 479px) {
+                        font-size: calc(12px + (6 + 6 * 0.7) * ((100vw - 310px) / 1200));
+                    }
+                }
+
+
+ 

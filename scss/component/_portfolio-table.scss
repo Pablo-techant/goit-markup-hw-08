@@ -1,0 +1,91 @@
+//table of contents
+.table-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    //table wrapper
+&__itym{
+    text-decoration: none;
+    display: block;
+    position: relative;
+    min-height: 404px;
+    width: 370px;
+    //animation
+    @extend %animation_box-shadow;
+    //navigation-effects
+    &:hover, 
+    &:hover,
+    &:active{
+    @extend %box-shadow-standard;
+    border-radius: $border-radius;
+}
+}
+    &__wrapper{
+        border: 1px solid $border-color;
+        border-top: none;
+        border-radius: 0 0 4px 4px;
+        padding: 24px 20px;
+        position: absolute;
+        width: 370px;
+        height: 110px;
+        //animation
+        @extend %animation_border;
+        //navigation-effects
+        &:hover,
+        &:focus{
+            border: none;
+        }
+    }
+//table text parameters
+&__title {
+    @include font (
+        $f-w: 700,
+        $f-s: $f-s_18, 
+        $l-h: $l-h-f, 
+        $l-s: $l-s-c, 
+        $c: $t_text-color,
+    );    
+}
+    &__tex {
+        @include font (
+            $f-s: $f-s_16, 
+            $l-h:  $l-h-p, 
+            $l-s: $l-s-b, 
+            $c: $primary-text-color,
+        );  
+    }
+//portfolio-overlay
+&__overlay{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}   
+    &__infobox{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 63px 24px;
+        background-color: $background-overlay-color-a;
+        transform: translatey(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        visibility: hidden;       
+    }
+        &__itym:hover .table-list__infobox,
+        &__itym:focus .table-list__infobox{
+            transform: translatey(0);
+            pointer-events: inherit;
+            visibility: visible;
+        }    
+            &__infotext{
+                @include font (
+                    $f-s: $f-s_18, 
+                    $l-h: $l-h-q, 
+                    $l-s: $l-s-b, 
+                    $c: $accent-text-color,
+                );    
+            }       
+}  
+
+   

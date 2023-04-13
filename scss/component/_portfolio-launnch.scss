@@ -1,0 +1,50 @@
+//potfolio
+//launnch
+.launnch{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 50px 0;
+    gap: 8px; 
+ }
+ /*---button parameters---*/
+ 
+.btn-laun{
+    @include font (
+        $f-w: 500, 
+        $f-s: $f-s_16, 
+        $l-h: $l-h-d,  
+    );
+        background-color: $btn-portfolio-kolor;
+        height: 38px;
+        //animation
+        @extend %animation_color;
+        @extend %animation_background-color;
+        @extend %animation_box-shadow;
+        //navigation-effects
+        &:hover, 
+        &:focus, 
+        &:active{
+            background-color: $nav-color;
+            color: $standart-background-color;
+            @extend %box-shadow-four-width;
+        }
+     
+}
+.one {
+    width: 67px;
+}
+.favorite {
+    width: 125px;
+}
+.three {
+    width: 112px;
+}
+.four {
+    width: 103px;
+}
+.five {
+    width: 130px;
+}
+         
+ 
+

@@ -1,0 +1,57 @@
+//invisible-element
+.invisible{
+    display: none;
+}
+//our advantages
+.list_advant {
+    @media (min-width: 1199px), (max-width: 1199px) {
+        gap: 30px;
+        display: flex;
+    }
+    @media (max-width: 1199px), (max-width: 767px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.item_advant {
+    @media (min-width: 1199px), (max-width: 1199px) {
+        flex-basis: 23.5%;
+    };
+    @media (max-width: 1199px) {
+        flex-basis: 47.96775%;
+    };
+    @media (max-width: 767px) {
+        flex-basis: 100%;
+    };
+}
+.item_aside {
+    @extend %disply_flex-center;
+    height: 120px;
+    background-color: $accent-background-color;
+    border-radius: $border-radius;
+    margin-bottom: 30px;
+}
+.advant-title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @include font (  
+        $f-w: 700 
+    );
+    @media (max-width: 767px) {
+        text-align: center;
+    };
+}
+    .advant-parag{
+        @include font (   
+            $l-h: $l-h-c,  
+            $c: $primary-text-color
+        );
+    } 
+//advantages svg
+.svg {
+    width: 70px;
+    height: 70px;
+}
+
+
+

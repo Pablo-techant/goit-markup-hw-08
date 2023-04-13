@@ -1,0 +1,77 @@
+//web-studio
+//launnch  
+.main-launnch, .background {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image:
+  linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+      rgba(47, 48, 58, 0.5)), url("../img/background/hero@1x.jpg");
+  @media (max-width: 769px) {
+    max-width: 768px;
+    min-height: 400px;
+    background-image: 
+        linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+          rgba(47, 48, 58, 0.5)), url("../img/background/hero768.jpg");
+  }
+  @media (max-width: 481px) {
+    max-width: 480px;
+    min-height: 400px;
+    background-image: 
+      linear-gradient(to right, rgba(4, 5, 18, 0.5), 
+        rgba(47, 48, 58, 0.5)), url("../img/background/hero480.jpg");
+  }   
+      
+}
+
+    
+    
+  
+.main_launnch {
+    padding: 200px 0;
+    text-align: center;
+    background-color: $accent-background-color;
+    @media (max-width: 769px) {
+        padding: 118px 0;
+      };
+}
+.main_headline {
+    text-transform: uppercase;
+    width: 696px;
+    margin: 0 auto 30px auto ;
+    @include font (  
+        $f-w: 900, 
+        $f-s: $f-s_44, 
+        $l-h: $l-h-o, 
+        $l-s: $l-s-c, 
+        $c: $accent-text-color
+    );
+    @media (max-width: 769px) {
+        width: calc(370px + (326 + 326 * 0.7) * ((100vw - 480px) / 1200));
+        font-size: calc(26px + (18 + 18 * 0.7) * ((100vw - 480px) / 1200));
+    };
+}
+.main_btn {
+    background-color: $nav-color;
+    padding: auto;
+    @include font (  
+        $f-w: 700, 
+        $f-s: $f-s_16, 
+        $l-h: $l-h-p, 
+        $l-s: $l-s-c, 
+        $c: $accent-text-color
+    );
+    //animation
+    @extend %animation_box-shadow;
+    @extend %animation_background-color;
+    &:hover, 
+    &:focus,
+    &:active{
+        @extend %box-shadow-four-btn;
+        background-color: $nav-btnhover;
+    }
+}
